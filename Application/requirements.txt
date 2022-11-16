@@ -1,3 +1,0 @@
-flask-ngrok
-pyngrok==4.1.1
-scikit-learn
