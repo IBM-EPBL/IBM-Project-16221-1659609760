@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	background-image: url("https://static01.nyt.com/images/2014/11/10/multimedia/corn-tech-indiana/corn-tech-indiana-videoSixteenByNine1050.gif");
+  opacity: 0.5
+	background-color: #cccccc;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: auto;
+	height: 100%;
+	background-position: center;
+	background-size: cover;}
+div.topnav{
+	background-color:black;
+	font-size:20px;
+	overflow:hidden;
+	padding: 10px 20px;
+	}
+div.topnav a{
+	color:white;
+	padding: 10px 20px;
+	text-align:center;
+	text-decoration:none;}
+div.topnav a:hover{
+	background-color:grey;}
+div.topnav a.active{
+	background-color:lime;
+	color:white;}
+h1{
+	font-family:Courier New;
+	font-size:40px;}
+h2{	font-family:Courier New;
+	text-align:center;
+	font-size:30px;}
+p{	font-family:Comic Sans MS;
+	font-size:20px;}
+ul{	font-family:Comfortaa;
+	font-size:20px;}
+label{	font-family:Comic Sans MS;
+		font-size:25px;
+     	display: flex;
+	     align-items: center;
+	     justify-content: center;
+	     margin: 0 auto;
+		}
+select {
+     margin-bottom: 10px;
+     margin-top: 2 px;
+	font-family: Comic Sans MS;
+	font-size: 17px;
+	font-align:center;
+        outline: 0;
+        background:  #d1dfd5;
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 9px;
+		height: 50px;
+ 		 width: 200px;
+   }
+input[type=submit] {
+  background-color: #F2D388;
+font-family: Comic Sans MS;
+	font-size: 17px;
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: center;
+  height: 50px;
+  width: 125px;
+}
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+  font-weight: bold;
+  color: #000000;
+}
+</style>
+    </head>
+<body>
+<div class="transbox">
+<h2 style="text-align:center">Rainfall Prediction</h2>
+<div class="topnav">
+ <a href="/">Precautions</a>
+ <a class="active" href="/pred_in">Rainfall prediction</a>
+ <a href='/trend_in'>Trend Analysis</a>
+</div>
+<h3>Please enter the following details</h3>
+<form action="/pred_out" style="text-align: center;">
+    
+        <p align=center><b>
+        <label for="Date">Date:</label>
+        <input type="date" id="Date" name="Date" />
+        </b></p>
+        
+        <p align=center><b>
+        <label for="Location">Location:</label>
+        <select name="location" id="location" >
+            <option value="none">  </option>
+            <option value="Albury">Albury</option>
+            <option value="BadgerysCreek">BadgerysCreek</option>
+            <option value="Cobar">Cobar</option>
+            <option value="CoffsHarbour">CoffsHarbour</option>
+            <option value="Moree">Moree</option>
+            <option value="Newcastle">Newcastle</option>
+            <option value="NorahHead">NorahHead</option>
+            <option value="NorfolkIsland">NorfolkIsland</option>
+            <option value="Penrith">Penrith</option>
+            <option value="Richmond">Richmond</option>
+            <option value="Sydney">Sydney</option>
+            <option value="SydneyAirport">SydneyAirport</option>
+            <option value="WaggaWagga">WaggaWagga</option>
+            <option value="Williamtown">Williamtown</option>
+            <option value="Wollongong">Wollongong</option>
+            <option value="Canberra">Canberra</option>
+            <option value="Tuggeranong">Tuggeranong</option>
+            <option value="MountGinini">MountGinini</option>
+            <option value="Ballarat">Ballarat</option>
+            <option value="Bendigo">Bendigo</option>
+            <option value="Sale">Sale</option>
+            <option value="MelbourneAirport">MelbourneAirport</option>
+            <option value="Melbourne">Melbourne</option>
+            <option value="Mildura">Mildura</option>
+            <option value="Nhil">Nhil</option>
+            <option value="Portland">Portland</option>
+            <option value="Watsonia">Watsonia</option>
+            <option value="Dartmoor">Dartmoor</option>
+            <option value="Brisbane">Brisbane</option>
+            <option value="Cairns">Cairns</option>
+            <option value="GoldCoast">GoldCoast</option>
+            <option value="Townsville">Townsville</option>
+            <option value="Adelaide">Adelaide</option>
+            <option value="MountGambier">MountGambier</option>
+            <option value="Nuriootpa">Nuriootpa</option>
+            <option value="Woomera">Woomera</option>
+            <option value="Albany">Albany</option>
+            <option value="Witchcliffe">Witchcliffe</option>
+            <option value="PearceRAAF">PearceRAAF</option>
+            <option value="PerthAirport">PerthAirport</option>
+            <option value="Perth">Perth</option>
+            <option value="SalmonGums">SalmonGums</option>
+            <option value="Walpole">Walpole</option>
+            <option value="Hobart">Hobart</option>
+            <option value="Launceston">Launceston</option>
+            <option value="AliceSprings">AliceSprings</option>
+            <option value="Darwin">Darwin</option>
+            <option value="Katherine">Katherine</option>
+            <option value="Uluru">Uluru</option></p>
+          </select>
+        <!-- <input type="text" id="Location" name="Location" /> -->
+        </b></p>
+
+        <p align=center><b>
+        <label for="mintemp">MinTemp:</label>
+        <input type="number" step="any" id="mintemp" name="MinTemp" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="maxtemp">MaxTemp:</label>
+        <input type="number" step="any" id="maxtemp" name="MaxTemp" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Rainfall">Rainfall:</label>
+        <input type="number" step="any" id="Rainfall" name="Rainfall" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Evaporation">Evaporation:</label>
+        <input type="number" step="any" id="Evaporation" name="Evaporation" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Sunshine">Sunshine:</label>
+        <input type="number" step="any" id="Sunshine" name="Sunshine" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="WindGustDir">WindGustDir:</label>
+        <select name="WindGustDir" id="WindGustDir" >
+            <option value="none">  </option>
+            <option value="W">W</option>
+            <option value="WNW">WNW</option>
+            <option value="WSW">WSW</option>
+            <option value="NE">NE</option>
+            <option value="NNW">NNW</option>
+            <option value="N">N</option>
+            <option value="NNE">NNE</option>
+            <option value="SW">SW</option>
+            <option value="ENE">ENE</option>
+            <option value="SSE">SSE</option>
+            <option value="NW">NW</option>
+            <option value="S">S</option>
+            <option value="SE">SE</option>
+            <option value="ESE">ESE</option>
+            <option value="E">E</option>
+            <option value="SSW">SSW</option>
+            </select>
+        </b></p>
+
+        <p align=center><b>
+        <label for="WindGustSpeed">WindGustSpeed:</label>
+        <input type="number" step="any" id="WindGustSpeed" name="WindGustSpeed" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="WindDir9am">WindDir9am:</label>
+        <select name="WindDir9am" id="WindDir9am" >
+                <option value="none">  </option>
+                <option value="W">W</option>
+                <option value="WNW">WNW</option>
+                <option value="WSW">WSW</option>
+                <option value="NE">NE</option>
+                <option value="NNW">NNW</option>
+                <option value="N">N</option>
+                <option value="NNE">NNE</option>
+                <option value="SW">SW</option>
+                <option value="ENE">ENE</option>
+                <option value="SSE">SSE</option>
+                <option value="NW">NW</option>
+                <option value="S">S</option>
+                <option value="SE">SE</option>
+                <option value="ESE">ESE</option>
+                <option value="E">E</option>
+                <option value="SSW">SSW</option>
+                </select>
+        </b></p>
+
+        <p align=center><b>
+        <label for="WindDir3pm">WindDir3pm:</label>
+        <select name="WindDir3PM" id="WindDir3PM" >
+            <option value="none">  </option>
+            <option value="W">W</option>
+            <option value="WNW">WNW</option>
+            <option value="WSW">WSW</option>
+            <option value="NE">NE</option>
+            <option value="NNW">NNW</option>
+            <option value="N">N</option>
+            <option value="NNE">NNE</option>
+            <option value="SW">SW</option>
+            <option value="ENE">ENE</option>
+            <option value="SSE">SSE</option>
+            <option value="NW">NW</option>
+            <option value="S">S</option>
+            <option value="SE">SE</option>
+            <option value="ESE">ESE</option>
+            <option value="E">E</option>
+            <option value="SSW">SSW</option>
+            </select>
+        </b></p>
+
+        <p align=center><b>
+        <label for="WindSpeed9am">WindSpeed9am:</label>
+        <input type="number" step="any" id="WindSpeed9am" name="WindSpeed9am" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="WindSpeed3pm">WindSpeed3pm:</label>
+        <input type="number" step="any" id="WindSpeed3pm" name="WindSpeed3pm" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Humidity9am">Humidity9am:</label>
+        <input type="number" step="any" id="Humidity9am" name="Humidity9am" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Humidity3pm">Humidity3pm:</label>
+        <input type="number" step="any" id="Humidity3pm" name="Humidity3pm" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Pressure9am">Pressure9am:</label>
+        <input type="number" step="any" id="Pressure9am" name="Pressure9am" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Pressure3pm">Pressure3pm:</label>
+        <input type="number" step="any" id="Pressure3pm" name="Pressure3pm" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Cloud9am">Cloud9am:</label>
+        <input type="number" step="any" id="Cloud9am" name="Cloud9am" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Cloud3pm">Cloud3pm:</label>
+        <input type="number" step="any" id="Cloud3pm" name="Cloud3pm" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Temp9am">Temp9am:</label>
+        <input type="number" step="any" id="Temp9am" name="Temp9am" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="Temp3pm">Temp3pm:</label>
+        <input type="number" step="any" id="Temp3pm" name="Temp3pm" />
+        </b></p>
+
+        <p align=center><b>
+        <label for="RainToday">RainToday:</label>
+        <select name="RainToday" id="RainToday" >
+            <option value="none">  </option>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+            </select>
+        </b></p>
+        <br><br>
+        <input type="submit" value="Predict"/>
+     
+</form>
+</div>
+</body>
+</html>
