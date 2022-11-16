@@ -3,7 +3,6 @@ import pandas as pd
 df = pd.read_csv("Rainfall_Weather.csv")
 
 from flask import Flask, render_template, request
-# from flask_ngrok import run_with_ngrok
 from datetime import datetime
 import pickle
 
@@ -11,7 +10,6 @@ filen = "KNN_rainfall.pkl"
 model = pickle.load(open(filen, 'rb'))
 
 app = Flask(__name__,template_folder="templates")
-# run_with_ngrok(app)
 
 @app.route("/")
 def prec():
