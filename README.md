@@ -165,7 +165,4 @@
 
 
 <div align="center">
- <h5> Made with <picture>
-  <source srcset="https://fonts.gstatic.com/s/e/notoemoji/latest/2764_fe0f/512.webp" type="image/webp">
-  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2764_fe0f/512.gif" alt="❤" width="12" height="12">
-</picture> in Coimbatore, India | Sri Ramakrishna Engineering College </h5>
+ <h5> Made with 💖 in Coimbatore, India | Sri Ramakrishna Engineering College </h5>
